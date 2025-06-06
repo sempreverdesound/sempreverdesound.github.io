@@ -24,7 +24,7 @@ button {
     border: none;
 }
 
-/* Navbar settings */
+/* Navbar Settings */
 
 nav,
 nav .navbar-nav,
@@ -62,4 +62,26 @@ nav .nav-link {
 
 nav .nav-link:hover, nav .nav-link:focus {
     color: var(--medium);
+}
+
+/** Footer Settings **/
+
+footer {
+    padding: 10px 0;
+    border-top: 1px solid var(--medium);
+    width: 90%;
+}
+
+footer img {
+    margin: 5px 50px;
+}
+
+footer .list-group-item {
+    border: none;
+    padding: 0 10px;
+    background-color: inherit;
+}
+
+footer .list-group-item a {
+    color: var(--dark);
 }

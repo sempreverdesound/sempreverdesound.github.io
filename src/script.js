@@ -28,7 +28,7 @@ module.config(function ($routeProvider, $locationProvider) {
 module.controller("controller", function ($scope) {
     // when resizing, reset the view if changing threshold
     $(window).resize(function () {
-        let icons = window.innerWidth < 768
+        let icons = window.innerWidth < 992
         if ($scope.icons !== icons) {
             $scope.icons = icons
             $scope.$apply()
@@ -36,7 +36,7 @@ module.controller("controller", function ($scope) {
     })
     // set properties and show body once everything is loaded
     $scope.songs = songs
-    $scope.icons = window.innerWidth < 768
+    $scope.icons = window.innerWidth < 992
     $('body').show()
 })
 
