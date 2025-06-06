@@ -7,6 +7,8 @@
     background-color: var(--light);
 }
 
+/* Main Settings */
+
 body {
     color: black;
     background-color: var(--light);
@@ -16,18 +18,40 @@ body {
     overflow-x: hidden;
 }
 
-
-/* Navbar settings */
-
-nav, nav .navbar-nav, nav .dropdown-menu {
-    background-color: var(--dark);
-    padding: 2px 10px;
-    margin: 0;
+button {
+    color: var(--light);
+    background: none;
     border: none;
 }
 
+/* Navbar settings */
+
+nav,
+nav .navbar-nav,
+nav .dropdown-menu,
+nav .dropdown-menu a,
+nav .nav-link,
+nav .nav-link:focus,
+nav .nav-link:hover {
+    background-color: var(--dark);
+}
+
+nav .navbar-nav {
+    flex: 1;
+}
+
+nav .nav-item {
+    padding: 0 10px;
+}
+
 nav .dropdown-menu {
-    display: block;
+    padding: 5px 0 10px 0;
+    border: none;
+}
+
+nav .dropdown-menu a {
+    padding: 5px 15px !important;
+    font-weight: 400;
 }
 
 nav .nav-link {
@@ -37,30 +61,5 @@ nav .nav-link {
 }
 
 nav .nav-link:hover, nav .nav-link:focus {
-    background-color: var(--dark);
     color: var(--medium);
-}
-
-nav .dropdown-menu a {
-    background-color: var(--dark);
-    padding: 5px !important;
-    font-weight: 400;
-}
-
-nav i {
-    padding-right: 10px;
-}
-
-.sidebar {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
-    -o-transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
-    -moz-transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
-    -webkit-transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
-    white-space: nowrap;
-    overflow: hidden;
 }

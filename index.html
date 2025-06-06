@@ -11,69 +11,57 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="src/style.css" rel="stylesheet">
-    <!-- Import Scripts (Bootstrap, JQuery, Angular, Angular Route, Custom Script) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Import Scripts (JQuery, Bootstrap Bundle, Angular, Angular Route, Custom Script) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
     <script src="src/script.js"></script>
 </head>
 
-<body ng-app="module" ng-controller="controller" ng-mousemove="navbar.reset = false" class="row" style="display: none">
-<nav ng-class="navbar.class"
-     ng-style="{'width': navbar.width}"
-     ng-mouseover="navbar.open = true"
-     ng-mouseleave="navbar.open = false"
-     style="z-index: 1; width: 40px"
-     class="navbar">
-    <ul ng-class="navbar.class" class="navbar-nav">
-        <!-- Hamburger Icon -->
-        <li ng-if="navbar.side" class="nav-item">
-            <span ng-click="navbar.open = !navbar.open" class="nav-link"><i class="bi bi-list"></i></span>
-        </li>
+<body ng-app="module" ng-controller="controller" class="d-block" style="display: none">
+<nav class="navbar navbar-expand fixed-top" style="height: 50px">
+    <ul class="navbar-nav d-flex">
         <!-- Home Button -->
-        <li class="nav-item">
-            <a ng-click="reset()" class="nav-link active" aria-current="page" href="#">
-                <i ng-if="navbar.side" class="bi bi-house-fill"></i> Home
-            </a>
-        </li>
+        <li class="nav-item active"><a class="nav-link" aria-current="page" href="#">
+            <i ng-if="icons" class="bi bi-house-fill"></i>
+            <span ng-if="!icons">Home</span>
+        </a></li>
         <!-- Songs Dropdown -->
-        <li ng-mouseover="navbar.drop = 1" ng-mouseleave="navbar.drop = 0" class="nav-item dropdown">
-            <span ng-click="navbar.open = true; navbar.drop = navbar.drop === 1 ? 0 : 1"
-                  class="nav-link dropdown-toggle" aria-expanded="{{navbar.drop === 1}}">
-                <i ng-if="navbar.side" class="bi bi-music-note-beamed"></i> Brani
-            </span>
-            <div ng-if="navbar.drop === 1" class="dropdown-menu">
-                <a ng-click="reset()" ng-repeat="song in ::songs" class="nav-link dropdown-item"
-                   href="#{{song.page}}">{{song.title}}</a>
-            </div>
+        <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle" id="songsLarge"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <i ng-if="icons" class="bi bi-music-note-beamed"></i>
+                <span ng-if="!icons">Brani</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="songsLarge">
+                <li ng-repeat="song in ::songs">
+                    <a class="nav-link dropdown-item" href="#{{song.page}}">{{song.title}}</a>
+                </li>
+            </ul>
         </li>
         <!-- Materials Dropdown -->
-        <li ng-mouseover="navbar.drop = 2" ng-mouseleave="navbar.drop = 0" class="nav-item dropdown">
-            <span ng-click="navbar.open = true; navbar.drop = navbar.drop === 2 ? 0 : 2"
-                  class="nav-link dropdown-toggle" aria-expanded="{{navbar.drop === 2}}">
-                <i ng-if="navbar.side" class="bi bi-file-richtext-fill"></i> Materiali
-            </span>
-            <div ng-if="navbar.drop === 2" class="dropdown-menu">
-                <a ng-click="reset()" class="nav-link dropdown-item" href="#presskit">Press Kit</a>
-                <a ng-click="reset()" class="nav-link dropdown-item" href="#rider">Rider Tecnico</a>
-                <a ng-click="reset()" class="nav-link dropdown-item" href="#photos">Foto</a>
-            </div>
+        <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle" id="materialsLarge"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <i ng-if="icons" class="bi bi-file-richtext-fill"></i>
+                <span ng-if="!icons">Materiali</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="materialsLarge">
+                <li><a class="nav-link dropdown-item" href="#presskit">Press Kit</a></li>
+                <li><a class="nav-link dropdown-item" href="#rider">Rider Tecnico</a></li>
+                <li><a class="nav-link dropdown-item" href="#photos">Foto</a></li>
+            </ul>
         </li>
         <!-- Contacts Button -->
-        <li class="nav-item">
-            <a ng-click="reset()" class="nav-link active" aria-current="page" href="#contacts">
-                <i ng-if="navbar.side" class="bi bi-envelope-fill"></i> Contatti
-            </a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#contacts">
+            <i ng-if="icons" class="bi bi-envelope-fill"></i>
+            <span ng-if="!icons">Contatti</span>
+        </a></li>
     </ul>
 </nav>
-<!-- Main View (close sidebar on click) -->
-<main ng-view
-      ng-click="navbar.open = false"
-      ng-class="{'sidebar': navbar.side}"
-      ng-style="{'left': navbar.offset}">
-</main>
+<!-- Main View-->
+<main ng-view class="container-fluid" style="margin-top: 60px"></main>
 </body>
 
 </html>
