@@ -9,7 +9,7 @@
 
 /* Main Settings */
 
-body {
+html, body {
     color: black;
     background-color: var(--light);
     font-family: "Exo 2", sans-serif;
@@ -18,10 +18,18 @@ body {
     overflow-x: hidden;
 }
 
-button {
-    color: var(--light);
-    background: none;
-    border: none;
+/* allows to always fill the main window */
+main > div {
+    min-height: calc(100vh - 130px)
+}
+
+.hr {
+    border-top: 1px solid var(--medium);
+}
+
+.info {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Navbar Settings */
@@ -64,24 +72,57 @@ nav .nav-link:hover, nav .nav-link:focus {
     color: var(--medium);
 }
 
+nav button {
+    color: var(--light);
+    background: none;
+    border: none;
+}
+
 /** Footer Settings **/
 
 footer {
-    padding: 10px 0;
-    border-top: 1px solid var(--medium);
-    width: 90%;
+    padding-bottom: 10px;
+    background-color: var(--light);
 }
 
 footer img {
-    margin: 5px 50px;
+    margin: 10px 50px 0 50px;
 }
 
 footer .list-group-item {
     border: none;
-    padding: 0 10px;
+    padding: 10px 10px 0 10px;
     background-color: inherit;
 }
 
 footer .list-group-item a {
     color: var(--dark);
+}
+
+/** Home Settings **/
+
+#home p {
+    margin: 10px 0;
+}
+
+#home img {
+    margin: auto;
+    padding: 10px;
+    max-width: 400px;
+}
+
+#home .fa {
+    color: var(--medium);
+}
+
+#home .card {
+    background-color: inherit;
+    border: none;
+}
+
+#home .card button {
+    color: var(--medium);
+    border: 2px solid var(--dark);
+    margin: 0 2px;
+    width: 50px;
 }

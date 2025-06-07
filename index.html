@@ -12,11 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="src/style.css" rel="stylesheet">
-    <!-- Import Scripts (JQuery, Bootstrap Bundle, Angular, Angular Route, Custom Script) -->
+    <!-- Import Scripts (JQuery, Bootstrap Bundle, Angular, Angular Route, Custom Scripts) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script src="src/constants.js"></script>
+    <script src="src/functions.js"></script>
     <script src="src/script.js"></script>
 </head>
 
@@ -26,90 +28,66 @@
     <ul class="navbar-nav d-flex">
         <!-- Home Button -->
         <li class="nav-item active"><a class="nav-link" aria-current="page" href="#">
-            <i ng-if="icons" class="bi bi-house-fill"></i>
-            <span ng-if="!icons">Home</span>
+            <span class="d-inline d-lg-none bi bi-house-fill"></span>
+            <span class="d-none d-lg-inline">Home</span>
         </a></li>
         <!-- Songs Dropdown -->
-        <!--        <li class="nav-item dropdown">-->
-        <!--            <button type="button" class="nav-link dropdown-toggle" id="songsLarge"-->
-        <!--                    data-bs-toggle="dropdown" aria-expanded="false">-->
-        <!--                <i ng-if="icons" class="bi bi-music-note-beamed"></i>-->
-        <!--                <span ng-if="!icons">Brani</span>-->
-        <!--            </button>-->
-        <!--            <ul class="dropdown-menu" aria-labelledby="songsLarge">-->
-        <!--                <li ng-repeat="song in ::songs">-->
-        <!--                    <a class="nav-link dropdown-item" href="#{{song.page}}">{{song.title}}</a>-->
-        <!--                </li>-->
-        <!--            </ul>-->
-        <!--        </li>-->
+        <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle" id="songs"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="d-inline d-lg-none bi bi-music-note-beamed"></span>
+                <span class="d-none d-lg-inline">Brani</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="songs">
+                <li ng-repeat="song in ::songs">
+                    <a class="nav-link dropdown-item" href="#{{song.alias}}">{{song.title}}</a>
+                </li>
+            </ul>
+        </li>
         <!-- Materials Dropdown -->
-        <!--        <li class="nav-item dropdown">-->
-        <!--            <button type="button" class="nav-link dropdown-toggle" id="materialsLarge"-->
-        <!--                    data-bs-toggle="dropdown" aria-expanded="false">-->
-        <!--                <i ng-if="icons" class="bi bi-file-richtext-fill"></i>-->
-        <!--                <span ng-if="!icons">Materiali</span>-->
-        <!--            </button>-->
-        <!--            <ul class="dropdown-menu" aria-labelledby="materialsLarge">-->
-        <!--                <li><a class="nav-link dropdown-item" href="#presskit">Press Kit</a></li>-->
-        <!--                <li><a class="nav-link dropdown-item" href="#rider">Rider Tecnico</a></li>-->
-        <!--                <li><a class="nav-link dropdown-item" href="#photos">Foto</a></li>-->
-        <!--            </ul>-->
-        <!--        </li>-->
+        <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle" id="materials"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="d-inline d-lg-none bi bi-file-richtext-fill"></span>
+                <span class="d-none d-lg-inline">Materiali</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="materials">
+                <li><a class="nav-link dropdown-item" href="#presskit">Press Kit</a></li>
+                <li><a class="nav-link dropdown-item" href="#rider">Rider Tecnico</a></li>
+                <li><a class="nav-link dropdown-item" href="#photos">Foto</a></li>
+            </ul>
+        </li>
         <!-- Contacts Button -->
         <li class="nav-item"><a class="nav-link" href="#contacts">
-            <i ng-if="icons" class="bi bi-envelope-fill"></i>
-            <span ng-if="!icons">Contatti</span>
+            <span class="d-inline d-lg-none bi bi-envelope-fill"></span>
+            <span class="d-none d-lg-inline">Contatti</span>
         </a></li>
     </ul>
 </nav>
 <!-- Main View-->
 <main ng-view class="container-fluid" style="margin-top: 60px"></main>
 <!-- Footer -->
-<div class="fixed-bottom d-flex justify-content-center">
-    <footer>
-        <div class="d-flex justify-content-center d-lg-none">
+<footer class="container-fluid justify-content-center">
+    <div class="hr" style="margin: 5px 3%"></div>
+    <div class="d-flex justify-content-center d-md-none">
+        <img src="res/logo.png" alt="SempreVerde" height="30">
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+        <ul class="list-group list-group-horizontal d-flex justify-content-center order-md-0">
+            <li class="list-group-item" ng-repeat="social in ::links.social">
+                <a href={{social.href}} target="_blank"><span class={{social.icon}}></span></a>
+            </li>
+        </ul>
+        <div class="d-flex justify-content-center d-none d-md-block">
             <img src="res/logo.png" alt="SempreVerde" height="30">
         </div>
-        <div class="d-flex align-items-center justify-content-center">
-            <ul class="list-group list-group-horizontal d-flex justify-content-center order-lg-0">
-                <li class="list-group-item">
-                    <a href="https://www.instagram.com/sempreverdesound" target="_blank"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://www.facebook.com/sempreverdesound" target="_blank"><i
-                            class="bi bi-facebook"></i></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://www.tiktok.com/@sempreverdesound" target="_blank"><i class="bi bi-tiktok"></i></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://www.soundcloud.com/sempreverdesound" target="_blank"><i
-                            class="fa fa-soundcloud"></i></a>
-                </li>
-            </ul>
-            <div class="d-flex justify-content-center d-none d-lg-block">
-                <img src="res/logo.png" alt="SempreVerde" height="30">
-            </div>
-            <ul class="list-group list-group-horizontal d-flex justify-content-center order-lg-2">
-                <li class="list-group-item">
-                    <a href="https://drive.google.com/drive/folders/1F_qeK3JcW64sNFSjV3dBaHvmOcEEeueX" target="_blank">
-                        <i class="bi bi-cloud-arrow-down-fill"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="mailto://luca.giuliani.11@gmail.com" target="_blank"><i
-                            class="bi bi-envelope-fill"></i></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="tel://+393382037596" target="_blank"><i class="bi bi-telephone-fill"></i></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://wa.me/+393382037596" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-</div>
+        <ul class="list-group list-group-horizontal d-flex justify-content-center order-md-2">
+            <li class="list-group-item" ng-repeat="contact in ::links.contacts">
+                <a href={{contact.href}} target="_blank"><span class={{contact.icon}}></span></a>
+            </li>
+        </ul>
+    </div>
+</footer>
 </body>
 
 </html>
