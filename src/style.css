@@ -49,14 +49,22 @@ nav {
         }
     }
 
-    .nav-link, .nav-link:focus {
+    .nav-link {
         color: var(--light);
-        cursor: pointer !important;
         font-weight: 600;
     }
 
     .nav-link:hover {
         color: var(--medium);
+    }
+
+    .nav-link:focus {
+        color: var(--light);
+    }
+
+    .nav-link, .nav-link:hover, .nav-link:focus {
+        cursor: pointer !important;
+        background-color: inherit;
     }
 
     button {
@@ -100,28 +108,12 @@ footer {
         max-width: 400px;
     }
 
-    .fa {
-        color: var(--medium);
-    }
-
-    .card {
-        background-color: inherit;
-        border: none;
-
-        button {
-            color: var(--medium);
-            border: 2px solid var(--dark);
-            margin: 0 2px;
-            width: 50px;
-        }
-    }
-
-    .progress-bar {
-        background-color: var(--dark);
+    #homePlayer {
+        width: 95%;
     }
 }
 
-/** Song Settings **/
+/** Songs Settings **/
 
 #song {
     strong {
@@ -143,28 +135,21 @@ footer {
         font-size: 0.7rem;
     }
 
-
     #songCredits {
         font-size: 0.9rem;
-
-        a {
-            color: var(--medium);
-        }
     }
 
+    a {
+        color: var(--medium)
+    }
 
-    button, a[type="button"] {
+    button {
         background-color: inherit;
         margin: -50px 0 -10px 0;
         color: var(--medium);
         font-size: 40px;
         border: none;
     }
-
-    .progress-bar {
-        background-color: var(--dark);
-    }
-
 }
 
 /** Contacts Settings **/
