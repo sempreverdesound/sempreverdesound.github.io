@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --dark: #293F14;
+    --medium: #579D6C;
+    --light: #E4E1D6;
+    background-color: var(--light);
+}
+
+/* Main Settings */
+
+html, body {
+    color: black;
+    background-color: var(--light);
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    overflow-x: hidden;
+
+    .justified {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .hr {
+        border-top: 1px solid var(--medium);
+    }
+}
+
+
+/* Navbar Settings */
+
+nav {
+    background-color: var(--dark);
+
+    .nav-item {
+        padding: 0 10px;
+    }
+
+    .dropdown-menu {
+        padding: 5px 0 10px 0;
+        background-color: var(--dark);
+        border-radius: 0;
+        border: none;
+
+        a {
+            padding: 5px 15px !important;
+            font-weight: 400;
+        }
+    }
+
+    .nav-link, .nav-link:focus {
+        color: var(--light);
+        cursor: pointer !important;
+        font-weight: 600;
+    }
+
+    .nav-link:hover {
+        color: var(--medium);
+    }
+
+    button {
+        color: var(--light);
+        background: none;
+        border: none;
+    }
+}
+
+/** Footer Settings **/
+
+footer {
+    padding-bottom: 10px;
+    background-color: var(--light);
+
+    img {
+        margin: 10px 50px 0 50px;
+    }
+
+    .list-group-item {
+        border: none;
+        padding: 10px 10px 0 10px;
+        background-color: inherit;
+
+        a {
+            color: var(--dark);
+        }
+    }
+}
+
+/** Home Settings **/
+
+#home {
+    p {
+        margin: 10px 0;
+    }
+
+    img {
+        margin: auto;
+        padding: 10px;
+        max-width: 400px;
+    }
+
+    .fa {
+        color: var(--medium);
+    }
+
+    .card {
+        background-color: inherit;
+        border: none;
+
+        button {
+            color: var(--medium);
+            border: 2px solid var(--dark);
+            margin: 0 2px;
+            width: 50px;
+        }
+    }
+
+    .progress-bar {
+        background-color: var(--dark);
+    }
+}
+
+/** Song Settings **/
+
+#song {
+    strong {
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        @media (min-width: 576px) {
+            font-size: 1.9rem;
+        }
+    }
+
+    small {
+        font-size: 0.7rem;
+    }
+
+
+    #songCredits {
+        font-size: 0.9rem;
+
+        a {
+            color: var(--medium);
+        }
+    }
+
+
+    button, a[type="button"] {
+        background-color: inherit;
+        margin: -50px 0 -10px 0;
+        color: var(--medium);
+        font-size: 40px;
+        border: none;
+    }
+
+    .progress-bar {
+        background-color: var(--dark);
+    }
+
+}
+
+/** Contacts Settings **/
+
+#contacts {
+    #contactsButton {
+        border: 1px solid var(--dark);
+        background-color: var(--medium);
+        color: var(--light);
+        min-height: 50px;
+    }
+
+    #contactsMessage {
+        min-height: 120px;
+    }
+
+    a {
+        color: var(--medium)
+    }
+}
