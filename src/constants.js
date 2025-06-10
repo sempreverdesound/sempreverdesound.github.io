@@ -45,8 +45,5 @@ const photos = [
     {name: "image2.jpg", alt: "SempreVerde - Foto 2."},
     {name: "image3.jpg", alt: "SempreVerde - Foto 3."},
     {name: "image4.jpg", alt: "SempreVerde - Foto 4."},
-    {name: "image5.jpg", alt: "SempreVerde - Foto 5."},
-    {name: "image6.jpg", alt: "SempreVerde - Foto 6."}
+    {name: "image5.jpg", alt: "SempreVerde - Foto 5."}
 ]
-
-const module = angular.module("module", ["ngRoute"])

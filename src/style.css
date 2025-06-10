@@ -107,10 +107,6 @@ footer {
         padding: 10px;
         max-width: 400px;
     }
-
-    #homePlayer {
-        width: 95%;
-    }
 }
 
 /** Songs Settings **/
@@ -135,7 +131,7 @@ footer {
         font-size: 0.7rem;
     }
 
-    #songCredits {
+    .credits {
         font-size: 0.9rem;
     }
 

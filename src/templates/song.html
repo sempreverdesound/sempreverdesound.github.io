@@ -3,8 +3,9 @@
     <h2 ng-if="song.subtitle !== undefined" class="my-0"><strong>({{song.subtitle}})</strong></h2>
 </div>
 
-<div class="d-flex mx-md-1 mt-1 mb-4 pe-1">
-    <i id="songCredits" class="col-8 d-block align-self-center mt-1 pb-2"></i>
+<div class="d-flex mx-md-1 mt-1 mb-4 pe-1 credits">
+    <!-- Use ng-bind-html instead of inserting the credits as text because they might contain html code-->
+    <i ng-bind-html="song.credits" class="col-8 d-block align-self-center mt-1 pb-2"></i>
 </div>
 
-<div ng-include="'src/lyrics/' + song.alias + '.html'" class="d-flex flex-column mx-md-1"></div>
+<div ng-include="'src/templates/songs/' + song.alias + '.html'" class="d-flex flex-column mx-md-1"></div>
