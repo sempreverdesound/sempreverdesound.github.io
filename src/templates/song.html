@@ -1,11 +1,19 @@
-<div class="d-block d-sm-flex align-items-center mx-md-1">
-    <h1 class="me-2 mb-0"><strong>{{song.title}}</strong></h1>
-    <h2 ng-if="song.subtitle !== undefined" class="my-0"><strong>({{song.subtitle}})</strong></h2>
-</div>
+<div class="my-2 d-flex justify-content-md-center" ng-init="lyrics = 'src/templates/songs/' + song.alias + '.html'">
+    <div class="w-100" style="max-width: var(--player)">
+        <div class="d-block d-md-flex align-items-center">
+            <h1 class="me-2 mb-0">{{song.title}}</h1>
+            <h2 ng-if="song.subtitle !== undefined" class="my-0">({{song.subtitle}})</h2>
+        </div>
 
-<div class="d-flex mx-md-1 mt-1 mb-4 pe-1 credits">
-    <!-- Use ng-bind-html instead of inserting the credits as text because they might contain html code-->
-    <i ng-bind-html="song.credits" class="col-8 d-block align-self-center mt-1 pb-2"></i>
-</div>
+        <div class="d-flex mt-1 mb-3 credits">
+            <!-- Use ng-bind-html instead of inserting the credits as text because they might contain html code-->
+            <i ng-bind-html="song.credits" class="d-block align-self-center mt-1 pb-2"></i>
+        </div>
 
-<div ng-include="'src/templates/songs/' + song.alias + '.html'" class="d-flex flex-column mx-md-1"></div>
+        <div id="songLyrics" ng-include="lyrics" class="d-flex flex-column"></div>
+
+        <div id="songPlayer">
+            <iframe width="100%" height="20px" allow="autoplay" ng-src="{{song.url}}"></iframe>
+        </div>
+    </div>
+</div>

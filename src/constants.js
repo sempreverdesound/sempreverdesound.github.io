@@ -1,24 +1,25 @@
 const songs = [
     {
-        title: "Erbatoccare",
+        url: "2108765244",
         alias: "erbatoccare",
-        alternatives: {extended: "Extended Mix"},
+        title: "Erbatoccare",
         credits: "Testo e Musica di Luca Giuliani"
     },
     {
-        title: "Le Mani/La Festa",
+        url: "2108764668",
         alias: "lmlf",
-        alternatives: {extended: "Extended Mix"},
+        title: "Le Mani/La Festa",
         credits: "Testo e Musica di Luca Giuliani"
     },
     {
+        url: "2108765919",
+        alias: "intro",
         title: "Intro",
         subtitle: "Empathy Is The Glue",
-        alias: "intro",
-        credits: "Testo campionato dal " +
+        credits: "<div class='pb-1'>Testo campionato dal " +
             "<a href='https://www.youtube.com/watch?v=Bx7z3sG7A9o' target='_blank'>discorso di Francesca Albanese</a>" +
-            " all'Assemblea Generale delle Nazioni Unite del 30 Ottobre 2024<br>" +
-            "Musica di Luca Giuliani"
+            " all'Assemblea Generale delle Nazioni Unite del 30 Ottobre 2024</div>" +
+            "<div>Musica di Luca Giuliani</div>"
     }
 ]
 
