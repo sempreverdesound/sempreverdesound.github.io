@@ -4,7 +4,7 @@
     --dark: #293F14;
     --medium: #579D6C;
     --light: #E4E1D6;
-    --player: 1200px;
+    --page: 1200px;
     background-color: var(--light);
 }
 
@@ -172,10 +172,34 @@ footer {
         }
 
         #songPlayer {
-            left: calc((100% - var(--player) - 50px) / 2);
-            right: calc((100% - var(--player) - 50px) / 2);
+            left: calc((100% - var(--page) - 50px) / 2);
+            right: calc((100% - var(--page) - 50px) / 2);
             bottom: 85px;
         }
+    }
+}
+
+/** Documents Settings **/
+
+#presskit, #rider, #photos {
+    p {
+        margin: 30px 0;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    a:hover {
+        color: var(--medium);
+    }
+
+    table, th, td {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        border: 1px solid black;
     }
 }
 
