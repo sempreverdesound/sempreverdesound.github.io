@@ -3,8 +3,8 @@
          data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item {{::($index === 0 ? 'active' : '')}}"
-                 ng-repeat="img in ::photos track by $index">
-                <img ng-src="res/{{img.name}}" class="d-block w-100" alt={{img.alt}}>
+                 ng-repeat="photo in ::photos track by $index">
+                <img ng-src="res/{{photo.name}}.jpg" class="d-block w-100" alt={{photo.alt}}>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#home-carousel" data-bs-slide="prev">

@@ -1,1 +1,12 @@
-<div>Sito in Costruzione</div>
+<div class="row">
+    <div ng-repeat="photo in ::photos" class="col-12 col-lg-6 col-xxl-4 text-center d-flex flex-column my-3">
+        <img class="align-self-center" src="res/{{photo.name}}.jpg" alt="{{photo.alt}}">
+        <a class="align-self-center" href="res/{{photo.name}}.jpg" download="{{photo.alt}}.jpg">
+            Download <span class="bi bi-download"></span>
+        </a>
+    </div>
+<!--    <button class="col-12 col-lg-6 col-xxl-4 text-center d-flex flex-column align-self-center my-3">-->
+<!--        <span class="bi bi-download"></span>-->
+<!--        <strong>Scarica Tutte</strong>-->
+<!--    </button>-->
+</div>

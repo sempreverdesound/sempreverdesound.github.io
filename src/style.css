@@ -203,6 +203,41 @@ footer {
     }
 }
 
+#photos {
+    button {
+        color: var(--dark);
+        background-color: inherit;
+        border: none;
+
+        strong {
+            font-size: 24px;
+        }
+
+        .bi-download {
+            font-size: 140px;
+        }
+    }
+
+    button:hover {
+        color: var(--medium);
+    }
+
+    img {
+        width: min(100%, 400px);
+    }
+
+    a {
+        width: inherit;
+        color: var(--dark);
+        text-decoration: none;
+        font-size: 24px;
+        padding: 5px 0;
+        .bi-download {
+            font-size: 30px;
+        }
+    }
+}
+
 /** Contacts Settings **/
 
 #contacts {

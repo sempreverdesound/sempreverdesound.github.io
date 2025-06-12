@@ -42,9 +42,9 @@ const links = {
 }
 
 const photos = [
-    {name: "image1.jpg", alt: "SempreVerde - Foto 1."},
-    {name: "image2.jpg", alt: "SempreVerde - Foto 2."},
-    {name: "image3.jpg", alt: "SempreVerde - Foto 3."},
-    {name: "image4.jpg", alt: "SempreVerde - Foto 4."},
-    {name: "image5.jpg", alt: "SempreVerde - Foto 5."}
+    {name: "image1", alt: "SempreVerde - Foto 1"},
+    {name: "image2", alt: "SempreVerde - Foto 2"},
+    {name: "image3", alt: "SempreVerde - Foto 3"},
+    {name: "image4", alt: "SempreVerde - Foto 4"},
+    {name: "image5", alt: "SempreVerde - Foto 5"}
 ]
