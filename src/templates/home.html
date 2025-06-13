@@ -1,10 +1,10 @@
 <div class="d-block d-lg-flex equal-height-row align-items-center justify-content-around">
-    <div id="home-carousel" class="col-12 col-lg-5 col-xl-4 p-0 carousel slide"
+    <div id="home-carousel" class="col-12 col-lg-5 col-xl-4 col-xxl-3 p-0 carousel slide"
          data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item {{::($index === 0 ? 'active' : '')}}"
                  ng-repeat="photo in ::photos track by $index">
-                <img ng-src="res/{{photo.name}}.jpg" class="d-block w-100" alt={{photo.alt}}>
+                <img src="res/{{photo.name}}.jpg" class="d-block w-100" alt={{photo.alt}}>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#home-carousel" data-bs-slide="prev">
@@ -16,10 +16,12 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="col-12 col-lg-7 col-xl-8 p-3 justified align-items-center justify-content-center">
-        <p>
+    <div class="col-12 col-lg-7 col-xl-8 col-xxl-9 p-3 pe-lg-5 justified align-items-center justify-content-center">
+        <p class="pb-xl-3">
             <strong style="color: var(--dark)">SempreVerde</strong> è il progetto solista di Luca Giuliani,
-            cantautore e produttore musicale con base a Bologna.
+            cantautore e produttore musicale con base a Bologna, già membro del duo elettropop
+            <a href="https://open.spotify.com/intl-it/artist/2wvpQCjOmseuzCLC9orKpn?si=SX406iOfSi-U_9eEje4gaw"
+               target="_blank" style="color: var(--medium)">Divinae Miranda</a>.
         </p>
         <p>
             Il progetto nasce dall'esigenza di sperimentare sonorità nuove, mescolando elementi <em>trance</em> e
@@ -28,19 +30,7 @@
             l'aspetto cupo della techno serve da spinta per cantare la rabbia e la disillusione, trattando
             apertamente temi sociali e politici all'interno dei brani a partire proprio dalla questione ecologica
             richiamata dal nome, dall'altro l'immaginario del <em>clubbing</em> è usato come collante per tenere
-            insieme un aspetto più collettivo e gioioso, che prende forma nei rituali più tribali della danza.
-        </p>
-        <p>
-            Musicalmente attivo già da diversi anni, Giuliani ha preso parte ad altri progetti fra cui il duo
-            <a href="https://open.spotify.com/intl-it/artist/2wvpQCjOmseuzCLC9orKpn?si=SX406iOfSi-U_9eEje4gaw"
-               target="_blank" style="color: var(--medium)"
-            >Divinae Miranda</a>.
-            In quattro anni di attività, con Divinae Miranda ha pubblicato due album e si è esibito in vari locali
-            di musica dal vivo del centro e nord Italia come <em>Sottoscala 9 (LT)</em>,
-            <em>Giardini Luzzati (GE)</em>, <em>Diagonal Loft Club (FC)</em>, <em>La Tenda</em> e <em>OFF (MO)</em>,
-            <em>DumBO</em> e <em>Porta Pratello (BO)</em>, <em>Vox Live Club (AN)</em>, <em>La Bookique (TN)</em>, e
-            altri eventi come il <em>Meeting delle Etichette Indipendenti (MEI)</em> di Faenza, le celebrazioni per
-            il <em>25 Aprile</em> a Bologna, e il festival <em>Suoni di Marca</em> a Treviso.
+            insieme un aspetto più collettivo e gioioso, che prende forma nei rituali tribali della danza.
         </p>
     </div>
 </div>

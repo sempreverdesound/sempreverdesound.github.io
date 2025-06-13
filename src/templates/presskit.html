@@ -1,1 +1,71 @@
-<div>Sito in Costruzione</div>
+<div class="align-self-center" style="max-width: 1300px">
+    <div class="row">
+        <div class="col-12 col-lg-5 py-2 p-3 ps-lg-2 text-center align-self-center">
+            <img src="res/image1.jpg" alt="Sempreverde - Immagine Profilo">
+        </div>
+        <div class="col-12 col-lg-7 py-2 p-3 pe-lg-2 justified align-items-center" style="margin-top: 6px">
+            <p class="mt-0">
+                <img src="res/logo.png" alt="Sempreverde" style="width: 200px; margin: -8px 2px 0 0"> è il progetto
+                solista di Luca Giuliani, cantautore e produttore musicale con base a Bologna.
+            </p>
+            <p>
+                Il progetto si sviluppa a partire da marzo 2025 con l'esigenza di sperimentare sonorità nuove,
+                mescolando elementi <em>trance</em> e <em>melodic techno</em> a testi ispirati dalla tradizione
+                cantautorale italiana di stampo più elettronico e alternativo, da <em>Franco Battiato</em> ai <em>Blue
+                Vertigo</em>. E se da un lato l'aspetto cupo della techno serve da spinta per cantare la rabbia e la
+                disillusione, trattando apertamente temi sociali e politici all'interno dei brani a partire proprio
+                dalla questione ecologica richiamata dal nome, dall'altro l'immaginario del <em>clubbing</em> è usato
+                come collante per tenere insieme un aspetto più collettivo e gioioso, che prende forma nei rituali
+                tribali della danza.
+            </p>
+            <p class="mb-0">
+                Musicalmente attivo già da diversi anni, Giuliani ha preso parte ad altri progetti fra cui il duo
+                <a href="https://open.spotify.com/intl-it/artist/2wvpQCjOmseuzCLC9orKpn?si=SX406iOfSi-U_9eEje4gaw"
+                   target="_blank" style="color: var(--medium)"
+                >Divinae Miranda</a>.
+                In quattro anni di attività, con Divinae Miranda ha pubblicato due album e si è esibito in vari locali
+                del centro e nord Italia come <em>Sottoscala 9 (LT)</em>, <em>Giardini Luzzati (GE)</em>, <em>Diagonal
+                Loft Club (FC)</em>, <em>La Tenda</em> e <em>OFF (MO)</em>, <em>DumBO</em> e <em>Porta Pratello
+                (BO)</em>, <em>Vox Live Club (AN)</em>, <em>La Bookique (TN)</em>, e altri eventi come il <em>Meeting
+                delle Etichette Indipendenti (MEI)</em> di Faenza, le celebrazioni per il <em>25 Aprile</em> a Bologna,
+                e il festival <em>Suoni di Marca</em> a Treviso.
+            </p>
+        </div>
+    </div>
+    <div class="hr mx-1 my-2" style="width: 101%"></div>
+    <div class="row px-2">
+        <div class="col-12 col-xxl-4 my-2">
+            <strong>Social</strong>
+            <ul>
+                <li ng-repeat="social in links.social">
+                    <span class="{{social.icon}}" style="width: 20px; margin-right: 2px"></span>
+                    {{social.name}}:
+                    <br class="d-none d-xxl-block">
+                    <a href="{{social.href}}">{{social.sref}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 col-xxl-4 my-2">
+            <strong>Contatti</strong>
+            <ul>
+                <li ng-repeat="contact in links.contacts.slice().reverse()">
+                    <span class="{{contact.icon}}" style="width: 20px; margin-right: 2px"></span>
+                    {{contact.name}}:
+                    <br class="d-none d-xxl-block">
+                    <a href="{{contact.href}}">{{contact.sref}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 col-xxl-4 my-2">
+            <strong>Canzoni</strong>
+            <ul>
+                <li ng-repeat="song in songs">
+                    <span class="" style="width: 20px; margin-right: 2px"></span>
+                    {{song.title}}:
+                    <br class="d-none d-xxl-block">
+                    <a href="https://www.soundcloud.com/sempreverdesound/{{song.alias}}">soundcloud.com/sempreverdesound/{{song.alias}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

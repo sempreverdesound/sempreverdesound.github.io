@@ -25,19 +25,55 @@ const songs = [
 
 const links = {
     social: [
-        {href: "https://www.instagram.com/sempreverdesound", icon: "bi bi-instagram"},
-        {href: "https://www.facebook.com/sempreverdesound", icon: "bi bi-facebook"},
-        {href: "https://www.tiktok.com/@sempreverdesound", icon: "bi bi-tiktok"},
-        {href: "https://www.soundcloud.com/sempreverdesound", icon: "fa fa-soundcloud"}
+        {
+            href: "https://www.instagram.com/sempreverdesound",
+            sref: "instagram.com/sempreverdesound",
+            icon: "bi bi-instagram",
+            name: "Instagram"
+        },
+        {
+            href: "https://www.facebook.com/sempreverdesound",
+            sref: "facebook.com/sempreverdesound",
+            icon: "bi bi-facebook",
+            name: "Facebook"
+        },
+        {
+            href: "https://www.tiktok.com/@sempreverdesound",
+            sref: "tiktok.com/@sempreverdesound",
+            icon: "bi bi-tiktok",
+            name: "Tiktok"},
+        {
+            href: "https://www.soundcloud.com/sempreverdesound",
+            sref: "soundcloud.com/sempreverdesound",
+            icon: "fa fa-soundcloud",
+            name: "SoundCloud"
+        },
     ],
     contacts: [
         {
             href: "https://drive.google.com/drive/folders/1F_qeK3JcW64sNFSjV3dBaHvmOcEEeueX",
-            icon: "bi bi-cloud-arrow-down-fill"
+            sref: "drive.google.com/drive/folders/1F_qeK3JcW64sNFSjV3dBaHvmOcEEeueX",
+            icon: "bi bi-cloud-arrow-down-fill",
+            name: "Materiali",
         },
-        {href: "mailto://luca.giuliani.11@gmail.com", icon: "bi bi-envelope-fill"},
-        {href: "tel://+393382037596", icon: "bi bi-telephone-fill"},
-        {href: "https://wa.me/+393382037596", icon: "bi bi-whatsapp"}
+        {
+            href: "mailto://luca.giuliani.11@gmail.com",
+            sref: "luca.giuliani.11@gmail.com",
+            icon: "bi bi-envelope-fill",
+            name: "Email"
+        },
+        {
+            href: "tel://+393382037596",
+            sref: "(+39) 338 2037596",
+            icon: "bi bi-telephone-fill",
+            name: "Telefono"
+        },
+        {
+            href: "https://wa.me/+393382037596",
+            sref: "(+39) 338 2037596",
+            icon: "bi bi-whatsapp",
+            name: "WhatsApp"
+        }
     ]
 }
 
