@@ -4,7 +4,8 @@
     --dark: #293F14;
     --medium: #579D6C;
     --light: #E4E1D6;
-    --page: 1200px;
+    --page: 100%;
+    --picture: 450px;
     background-color: var(--light);
 }
 
@@ -105,8 +106,8 @@ footer {
 
     img {
         margin: auto;
-        padding: 10px;
-        max-width: 400px;
+        padding: 0;
+        max-width: var(--picture);
     }
 
     .carousel button {
@@ -187,11 +188,11 @@ footer {
 
 #presskit {
     img {
-        width: min(100%, 500px);
+        width: min(100%, var(--picture));
     }
 
     p {
-        margin: 30px 0;
+        margin: 15px 0;
         text-align: justify;
         text-justify: inter-word;
     }
@@ -254,7 +255,7 @@ footer {
     }
 
     img {
-        width: min(100%, 400px);
+        width: min(100%, var(--picture));
     }
 }
 

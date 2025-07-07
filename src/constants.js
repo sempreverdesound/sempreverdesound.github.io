@@ -1,5 +1,11 @@
 const songs = [
     {
+        url: "2125855104",
+        alias: "campi-sterminati",
+        title: "Campi Sterminati",
+        credits: "Testo e Musica di Luca Giuliani"
+    },
+    {
         url: "2108765244",
         alias: "erbatoccare",
         title: "Erbatoccare",
@@ -7,7 +13,7 @@ const songs = [
     },
     {
         url: "2108764668",
-        alias: "lmlf",
+        alias: "le-mani-la-festa",
         title: "Le Mani/La Festa",
         credits: "Testo e Musica di Luca Giuliani"
     },
