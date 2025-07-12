@@ -42,10 +42,7 @@ angular.module("module", ["ngRoute", "ngSanitize"])
 
         // modify urls to include the full path to soundcloud while also setting them as trusted sources
         $scope.songs.forEach(song => {
-            song.url = $sce.trustAsResourceUrl(
-                "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.url +
-                "&color=%23579D6C&auto_play=true&show_user=false"
-            )
+            song.url = $sce.trustAsResourceUrl("https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.url + "&color=%23579D6C&show_user=false")
         })
     })
 

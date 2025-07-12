@@ -1,22 +1,22 @@
-<div class="d-block d-lg-flex mx-2 equal-height-row justify-content-around">
-    <div id="home-carousel" data-bs-ride="carousel"
-         class="col-12 col-lg-6 col-xxl-4 py-2 px-3 px-lg-2 text-center align-self-top carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item {{::($index === 0 ? 'active' : '')}}"
-                 ng-repeat="photo in ::photos track by $index">
-                <img src="res/{{photo.name}}.jpg" class="d-block w-100" alt={{photo.alt}}>
+<div class="d-flex flex-column flex-lg-row mx-2 equal-height-row justify-content-around">
+    <div class="py-2 px-3 px-lg-2">
+        <div id="home-carousel" data-bs-ride="carousel" class="text-center align-self-top carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item {{::($first ? 'active' : '')}}" ng-repeat="photo in photos">
+                    <img src="res/{{photo.name}}.jpg" class="d-block photo" alt={{photo.alt}}>
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#home-carousel" data-bs-slide="prev">
+                <span class="fa fa-3x fa-angle-left" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#home-carousel" data-bs-slide="next">
+                <span class="fa fa-3x fa-angle-right" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#home-carousel" data-bs-slide="prev">
-            <span class="fa fa-3x fa-angle-left" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#home-carousel" data-bs-slide="next">
-            <span class="fa fa-3x fa-angle-right" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-    <div class="col-12 col-lg-6 col-xxl-8 py-2 px-3 px-lg-2 justified align-self-center">
+    <div class="py-2 px-3 px-lg-2 justified align-self-center">
         <p class="mt-0 pb-xl-3">
             <strong style="color: var(--dark)">SempreVerde</strong> è il progetto solista di Luca Giuliani,
             cantautore e produttore musicale con base a Bologna, già membro del duo elettropop

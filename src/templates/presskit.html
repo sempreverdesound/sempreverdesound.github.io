@@ -1,24 +1,24 @@
-<div class="align-self-center" style="max-width: var(--page)">
-    <div class="row mx-2">
-        <div class="col-12 col-lg-6 col-xxl-4 py-2 px-3 px-lg-2 text-center align-self-top">
-            <img src="res/image1.jpg" alt="Sempreverde - Immagine Profilo">
+<div class="align-self-center">
+    <div class="d-flex flex-column flex-lg-row flex-print-row mx-2">
+        <div class="py-2 px-3 px-lg-2 p-print-0 align-self-center">
+            <img src="res/image1.jpg" class="photo" alt="Sempreverde - Immagine Profilo">
         </div>
-        <div class="col-12 col-lg-6 col-xxl-8 py-2 px-3 px-lg-2 justified align-self-center">
-            <p class="mt-0">
-                <img src="res/logo.png" alt="Sempreverde" style="width: 200px; margin: -8px 2px 0 0"> è il progetto
-                solista di Luca Giuliani, cantautore e produttore musicale con base a Bologna.
-            </p>
+        <div class="d-flex flex-column py-2 px-3 px-lg-2 p-print-0 justified justify-content-evenly">
             <p>
+                <img src="res/logo.png" class="logo" alt="Sempreverde" style="width: 200px; margin: -8px 2px 0 0">
+                è il progetto solista di Luca Giuliani, cantautore e produttore musicale con base a Bologna.
+            </p>
+            <p class="m-0">
                 Il progetto si sviluppa a partire da marzo 2025 con l'esigenza di sperimentare sonorità nuove,
                 mescolando elementi <em>trance</em> e <em>melodic techno</em> a testi ispirati dalla tradizione
-                cantautorale italiana di stampo più elettronico e alternativo, da <em>Franco Battiato</em> ai <em>Blue
-                Vertigo</em>. E se da un lato l'aspetto cupo della techno serve da spinta per cantare la rabbia e la
-                disillusione, trattando apertamente temi sociali e politici all'interno dei brani a partire proprio
-                dalla questione ecologica richiamata dal nome, dall'altro l'immaginario del <em>clubbing</em> è usato
-                come collante per tenere insieme un aspetto più collettivo e gioioso, che prende forma nei rituali
-                tribali della danza.
+                cantautorale italiana di stampo più elettronico e alternativo, da <em>Franco Battiato</em> ai
+                <em>Subsonica</em> e i <em>Blue Vertigo</em>. E se da un lato l'aspetto cupo della techno serve da
+                spinta per cantare la rabbia e la disillusione, trattando apertamente temi sociali e politici
+                all'interno dei brani a partire proprio dalla questione ecologica richiamata dal nome, dall'altro
+                l'immaginario del <em>clubbing</em> è usato come collante per tenere insieme un aspetto più collettivo
+                e gioioso, che prende forma nei rituali tribali della danza.
             </p>
-            <p class="mb-0">
+            <p class="d-block d-lg-none d-print-none d-xxl-block">
                 Musicalmente attivo già da diversi anni, Giuliani ha preso parte ad altri progetti fra cui il duo
                 <a href="https://open.spotify.com/intl-it/artist/2wvpQCjOmseuzCLC9orKpn?si=SX406iOfSi-U_9eEje4gaw"
                    target="_blank" style="color: var(--medium)"
@@ -32,38 +32,52 @@
             </p>
         </div>
     </div>
+    <div class="py-2 px-3 px-lg-2 px-print-0 mx-2 justified align-self-center">
+        <p class="d-none d-lg-block d-print-block d-xxl-none m-0">
+            Musicalmente attivo già da diversi anni, Giuliani ha preso parte ad altri progetti fra cui il duo
+            <a href="https://open.spotify.com/intl-it/artist/2wvpQCjOmseuzCLC9orKpn?si=SX406iOfSi-U_9eEje4gaw"
+               target="_blank" style="color: var(--medium)"
+            >Divinae Miranda</a>.
+            In quattro anni di attività, con Divinae Miranda ha pubblicato due album e si è esibito in vari locali
+            del centro e nord Italia come <em>Sottoscala 9 (LT)</em>, <em>Giardini Luzzati (GE)</em>, <em>Diagonal
+            Loft Club (FC)</em>, <em>La Tenda</em> e <em>OFF (MO)</em>, <em>DumBO</em> e <em>Porta Pratello
+            (BO)</em>, <em>Vox Live Club (AN)</em>, <em>La Bookique (TN)</em>, e altri eventi come il <em>Meeting
+            delle Etichette Indipendenti (MEI)</em> di Faenza, le celebrazioni per il <em>25 Aprile</em> a Bologna,
+            e il festival <em>Suoni di Marca</em> a Treviso.
+        </p>
+    </div>
     <div class="hr mx-2 my-2"></div>
-    <div class="row px-3">
-        <div class="col-12 col-xxl-4 my-2">
+    <div id="info" class="d-flex flex-column flex-xxl-row justify-content-between">
+        <div>
             <strong>Social</strong>
             <ul>
                 <li ng-repeat="social in links.social">
                     <span class="{{social.icon}}" style="width: 20px; margin-right: 2px"></span>
                     {{social.name}}:
                     <br class="d-none d-xxl-block">
-                    <a href="{{social.href}}">{{social.sref}}</a>
+                    <a href="{{social.href}}" target="_blank">{{social.sref}}</a>
                 </li>
             </ul>
         </div>
-        <div class="col-12 col-xxl-4 my-2">
+        <div>
             <strong>Contatti</strong>
             <ul>
                 <li ng-repeat="contact in links.contacts.slice().reverse()">
                     <span class="{{contact.icon}}" style="width: 20px; margin-right: 2px"></span>
                     {{contact.name}}:
                     <br class="d-none d-xxl-block">
-                    <a href="{{contact.href}}">{{contact.sref}}</a>
+                    <a href="{{contact.href}}" target="_blank">{{contact.sref}}</a>
                 </li>
             </ul>
         </div>
-        <div class="col-12 col-xxl-4 my-2">
+        <div>
             <strong>Canzoni</strong>
             <ul>
                 <li ng-repeat="song in songs">
                     <span class="bi bi-music-note-list" style="width: 20px; margin-right: 2px"></span>
                     {{song.title}}:
                     <br class="d-none d-xxl-block">
-                    <a href="https://www.soundcloud.com/sempreverdesound/{{song.alias}}">soundcloud.com/sempreverdesound/{{song.alias}}</a>
+                    <a href="https://www.soundcloud.com/sempreverdesound/{{song.alias}}" target="_blank">soundcloud.com/sempreverdesound/{{song.alias}}</a>
                 </li>
             </ul>
         </div>

@@ -6,7 +6,7 @@ of the electropop duo
 
 The project was born out of the need to experiment with new sounds, mixing *trance* and *melodic techno* elements with
 lyrics inspired by the Italian singer-songwriter tradition of a more electronic and alternative kind, from
-*Franco Battiato* to *Blue Vertigo*. And while on the one hand the dark aspect of techno serves as a thrust to sing
-about anger and disillusionment, openly dealing with social and political issues within the songs starting precisely
-with the ecological issue recalled by the name, on the other hand the imagery of *clubbing* is used as a glue to hold
-together a more collective and joyful aspect, which takes shape in the tribal rituals of dance.
+*Franco Battiato* to *Subsonica* and *Blue Vertigo*. And while on the one hand the dark aspect of techno serves as a 
+thrust to sing about anger and disillusionment, openly dealing with social and political issues within the songs
+starting precisely with the ecological issue recalled by the name, on the other hand the imagery of *clubbing* is used
+as a glue to hold together a more collective and joyful aspect, which takes shape in the tribal rituals of dance.

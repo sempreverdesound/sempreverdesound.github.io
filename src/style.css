@@ -4,8 +4,7 @@
     --dark: #293F14;
     --medium: #579D6C;
     --light: #E4E1D6;
-    --page: 100%;
-    --picture: 450px;
+    --picture: min(100vw - 80px, 450px);
     background-color: var(--light);
 }
 
@@ -18,6 +17,14 @@ html, body {
     font-weight: 400;
     font-size: 18px;
     overflow-x: hidden;
+
+    .photo {
+        padding: 0;
+        margin: auto;
+        align-self: start;
+        text-align: center;
+        width: var(--picture);
+    }
 
     .justified {
         text-align: justify;
@@ -83,6 +90,7 @@ footer {
     background-color: var(--light);
 
     img {
+        width: auto;
         margin: 10px 50px 0 50px;
     }
 
@@ -104,15 +112,15 @@ footer {
         margin: 10px 0;
     }
 
-    img {
-        margin: auto;
-        padding: 0;
-        max-width: var(--picture);
+    #home-carousel {
+        width: var(--picture);
+        justify-self: center;
+
+        button {
+            color: white;
+        }
     }
 
-    .carousel button {
-        color: var(--medium);
-    }
 }
 
 /** Songs Settings **/
@@ -140,7 +148,7 @@ footer {
     }
 
     p {
-        padding: 10px 0;
+        padding: 0;
     }
 
     a {
@@ -168,17 +176,19 @@ footer {
             font-size: 1.9rem;
         }
 
-        strong {
-            margin-left: -16px;
-        }
-
         #songLyrics {
-            margin-left: 20px;
+            p {
+                margin-left: 20px;
+            }
+
+            strong {
+                margin-left: 4px;
+            }
         }
 
         #songPlayer {
-            left: calc((100% - var(--page) - 50px) / 2);
-            right: calc((100% - var(--page) - 50px) / 2);
+            left: 25px;
+            right: 25px;
             bottom: 85px;
         }
     }
@@ -187,8 +197,8 @@ footer {
 /** Documents Settings **/
 
 #presskit {
-    img {
-        width: min(100%, var(--picture));
+    #info {
+        padding: 10px max(15px, 0.2 * (100vw - 1400px));
     }
 
     p {
@@ -199,6 +209,7 @@ footer {
 
     a {
         color: inherit;
+        font-size: 0.95rem;
         word-break: break-all;
     }
 
@@ -252,10 +263,7 @@ footer {
 
     a:hover {
         color: var(--medium);
-    }
-
-    img {
-        width: min(100%, var(--picture));
+        text-decoration: underline;
     }
 }
 
@@ -275,5 +283,106 @@ footer {
 
     a {
         color: var(--medium)
+    }
+}
+
+/** Print Settings **/
+@media print {
+    @page {
+        size: A4 portrait !important;
+    }
+
+    html {
+        print-color-adjust:exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    main {
+        padding: 0 !important;
+        margin: 9mm 8mm !important;
+        font-size: 14px !important;
+    }
+
+    footer {
+        position: fixed !important;
+        padding-bottom: 15px !important;
+        bottom: 0 !important;
+    }
+
+    #presskit {
+        strong {
+            text-transform: uppercase !important;
+            font-size: 18px !important;
+        }
+
+        div {
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+        }
+
+        p {
+            padding: 0 !important;
+            margin: 5px 0 !important;
+        }
+
+        .photo {
+            width: 380px !important;
+            margin-right: 20px !important;
+        }
+
+        .logo {
+            width: 300px !important;
+            display: flex !important;
+            align-self: center !important;
+            margin: 0 auto 5px auto !important;
+        }
+    }
+
+    #song {
+        #songLyrics {
+            margin: 10px 0 0 0 !important;
+        }
+
+        h1, h2, strong {
+            margin: 0 !important;
+        }
+    }
+
+    .hr {
+        margin: 15px 0 !important;
+    }
+
+    .m-print-0 {
+        margin: 0 !important;
+    }
+
+    .p-print-0 {
+        padding: 0 !important;
+    }
+
+    .px-print-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .d-print-none {
+        display: none !important;
+    }
+
+    .d-print-block {
+        display: block !important;
+    }
+
+    .d-print-flex {
+        display: flex !important;
+    }
+
+    .flex-print-row {
+        flex-direction: row !important;
+    }
+
+    .flex-print-column {
+        flex-direction: column !important;
     }
 }
