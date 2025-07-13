@@ -5,6 +5,7 @@
     --medium: #579D6C;
     --light: #E4E1D6;
     --picture: min(100vw - 80px, 450px);
+    --font-size: 18px;
     background-color: var(--light);
 }
 
@@ -15,8 +16,8 @@ html, body {
     background-color: var(--light);
     font-family: "Exo 2", sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    overflow-x: hidden;
+    font-size: var(--font-size);
+    scrollbar-color: var(--dark) rgba(255, 255, 255, 0.6);
 
     .photo {
         padding: 0;
@@ -36,44 +37,75 @@ html, body {
     }
 }
 
+main {
+    margin-top: 60px;
+    min-height: 100vh;
+}
 
 /* Navbar Settings */
 
 nav {
+    height: 50px;
     background-color: var(--dark);
 
-    .nav-item {
-        padding: 0 10px;
+    ul {
+        flex: 1;
     }
 
     .dropdown-menu {
-        padding: 5px 0 10px 0;
+        margin: 0 !important;
+        padding: 5px 0;
         background-color: var(--dark);
+        box-shadow: 2px 2px 2px var(--light);
+        -moz-box-shadow: 2px 2px 2px var(--light);
+        -webkit-box-shadow: 2px 2px 2px var(--light);
         border-radius: 0;
         border: none;
 
-        a {
-            padding: 5px 15px !important;
+        .nav-link {
+            height: 35px;
+            margin: 0;
+            padding: 0 15px;
             font-weight: 400;
         }
     }
 
     .nav-link {
+        background-color: var(--dark);
         color: var(--light);
         font-weight: 600;
+        height: 40px;
+        padding: 0 20px !important;
+        margin-top: 10px;
+        border-radius: 5px 5px 0 0;
+        align-content: center;
     }
 
-    .nav-link:hover {
+    .nav-link:focus, .nav-link:hover {
         color: var(--medium);
-    }
-
-    .nav-link:focus {
-        color: var(--light);
     }
 
     .nav-link, .nav-link:hover, .nav-link:focus {
         cursor: pointer !important;
         background-color: inherit;
+    }
+
+    .page {
+        .dropdown-menu {
+            background-color: var(--light);
+            box-shadow: 2px 2px 2px var(--dark);
+            -moz-box-shadow: 2px 2px 2px var(--dark);
+            -webkit-box-shadow: 2px 2px 2px var(--dark);
+        }
+
+        .nav-link {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        .nav-link:focus, .nav-link:hover {
+            color: var(--medium);
+        }
     }
 
     button {
@@ -132,19 +164,19 @@ footer {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: calc(2 * var(--font-size));
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: calc(1.3 * var(--font-size));
     }
 
     small {
-        font-size: 0.7rem;
+        font-size: calc(0.7 * var(--font-size));
     }
 
     .credits {
-        font-size: 0.9rem;
+        font-size: calc(0.9 * var(--font-size));
     }
 
     p {
@@ -173,7 +205,7 @@ footer {
 
     @media (min-width: 768px) {
         h2 {
-            font-size: 1.9rem;
+            font-size: calc(1.9 * var(--font-size));
         }
 
         #songLyrics {
@@ -199,6 +231,11 @@ footer {
 #presskit {
     #info {
         padding: 10px max(15px, 0.2 * (100vw - 1400px));
+
+        a {
+            font-size: calc(0.9 * var(--font-size));
+            word-break: break-all;
+        }
     }
 
     p {
@@ -209,8 +246,6 @@ footer {
 
     a {
         color: inherit;
-        font-size: 0.95rem;
-        word-break: break-all;
     }
 
     a:hover {
@@ -243,7 +278,7 @@ footer {
     }
 
     table, th, td {
-        font-size: 0.8rem;
+        font-size: calc(0.8 * var(--font-size));
         padding: 5px 10px;
         border: 1px solid black;
     }
@@ -253,11 +288,11 @@ footer {
     a {
         color: var(--dark);
         text-decoration: none;
-        font-size: 24px;
+        font-size: calc(1.4 * var(--font-size));
         padding: 5px 0;
 
         .bi-download {
-            font-size: 30px;
+            font-size: calc(1.7 * var(--font-size));
         }
     }
 
@@ -287,20 +322,24 @@ footer {
 }
 
 /** Print Settings **/
+
 @media print {
     @page {
         size: A4 portrait !important;
     }
 
+    :root {
+        --font-size: 14px !important;
+    }
+
     html {
-        print-color-adjust:exact !important;
+        print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
     }
 
     main {
         padding: 0 !important;
         margin: 9mm 8mm !important;
-        font-size: 14px !important;
     }
 
     footer {
@@ -310,9 +349,10 @@ footer {
     }
 
     #presskit {
+
         strong {
             text-transform: uppercase !important;
-            font-size: 18px !important;
+            font-size: calc(1.3 * var(--font-size)) !important;
         }
 
         div {

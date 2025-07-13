@@ -19,7 +19,7 @@ angular.module("module", ["ngRoute", "ngSanitize"])
         $scope.photos = photos
         $scope.links = links
         $scope.songs = songs
-        $scope.page = "home"
+        $scope.page = undefined
         $scope.song = undefined
 
         // change page value and song index every time there is a new routing
