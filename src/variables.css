@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --dark: #293F14;
+    --medium: #579D6C;
+    --light: #E4E1D6;
+
+    --font-size: 18px;
+    --body-color: black;
+    --body-background: var(--light);
+    --body-padding: 20px;
+
+    --nav-height: 50px;
+    --nav-color: var(--light);
+    --nav-background: var(--dark);
+
+    --footer-height: 90px;
+    --footer-logo-width: 100vw;
+
+    --photo-width: 100%;
+
+    --song-subtitle-multiplier: 1.3;
+    --song-paragraph-margin-left: 0px;
+    --song-section-margin-left: 0px;
+    --song-player-padding: 7px;
+    --song-player-sides: 10px;
+
+    --presskit-area: "photo" "side" "bottom";
+    --presskit-logo-width: 200px;
+    --presskit-logo-margin: -8px 2px 0 0;
+
+    --photos-grid: 1;
+
+    @media (min-width: 768px) {
+        --footer-height: 60px;
+        --footer-logo-width: fit-content;
+        --photo-width: max-content;
+        --song-subtitle-multiplier: 1.9;
+        --song-paragraph-margin-left: 16px;
+        --song-section-margin-left: 4px;
+        --song-player-sides: 25px;
+    }
+
+    @media (min-width: 992px) {
+        --body-padding: 25px;
+        --presskit-area: "photo side" "bottom bottom";
+        --photos-grid: 2;
+    }
+
+    @media (min-width: 1400px) {
+        --presskit-area: "photo side" "photo bottom";
+        --photos-grid: 3;
+    }
+
+    @media print {
+        --font-size: 14px;
+        --body-padding: 30px;
+        --nav-height: 0px;
+        --photo-width: 380px;
+        --presskit-area: "photo side" "bottom bottom";
+        --presskit-logo-width: 300px;
+        --presskit-logo-margin: 0;
+    }
+}

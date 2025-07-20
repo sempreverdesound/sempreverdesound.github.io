@@ -1,7 +1,7 @@
-<div class="d-flex justify-content-center justify-content-md-evenly flex-wrap">
-    <div ng-repeat="photo in photos" class="d-flex flex-column text-center p-5">
-        <img src="res/{{photo.name}}.jpg" class="photo" alt="{{photo.alt}}">
-        <a href="res/{{photo.name}}-hq.jpg"
-           download="{{photo.alt}}.jpg"><span class="bi bi-download"> Download</span></a>
-    </div>
+<div ng-repeat="photo in photos" class="text-center">
+    <img src="res/{{photo.name}}.jpg" class="photo" alt="{{photo.alt}}">
+    <br>
+    <a href="res/{{photo.name}}-hq.jpg" download="{{photo.alt}}.jpg">
+        <span class="bi bi-download pe-2"></span>Download
+    </a>
 </div>
