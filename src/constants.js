@@ -6,6 +6,12 @@ const songs = [
         credits: "Testo e Musica di Luca Giuliani"
     },
     {
+        url: "2148266667",
+        alias: "cinderella-rave",
+        title: "Cinderella Rave",
+        credits: "Testo e Musica di Luca Giuliani"
+    },
+    {
         url: "2108765244",
         alias: "erbatoccare",
         title: "Erbatoccare",
