@@ -45,6 +45,14 @@ a:hover {
     max-width: 400px;
 }
 
+#header-margin {
+    height: var(--nav-height);
+}
+
+#footer-margin {
+    height: calc(var(--footer-height) + var(--body-padding));
+}
+
 /* Navbar & Footer Settings */
 
 nav {
@@ -108,8 +116,7 @@ footer {
 /** Sections Settings **/
 
 main {
-    padding: var(--body-padding);
-    margin-top: var(--nav-height);
+    padding: 10px var(--body-padding);
     margin-bottom: var(--footer-height);
     min-height: calc(100vh - var(--nav-height) - var(--footer-height));
 }

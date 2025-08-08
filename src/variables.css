@@ -55,7 +55,7 @@
     @media print {
         --font-size: 14px;
         --body-padding: 30px;
-        --nav-height: 0px;
+        --nav-height: 40px;
         --photo-width: 380px;
         --presskit-area: "photo side" "bottom bottom";
         --presskit-logo-width: 300px;

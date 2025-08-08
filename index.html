@@ -76,7 +76,17 @@
         </li>
     </ul>
 </nav>
-<main ng-view ng-class="page" class="d-flex flex-column"></main>
+<table class="w-100">
+    <thead id="header-margin"></thead>
+    <tbody>
+    <tr>
+        <td class="p-0">
+            <main ng-view ng-class="page" class="d-flex flex-column"></main>
+        </td>
+    </tr>
+    </tbody>
+    <tfoot id="footer-margin"></tfoot>
+</table>
 <footer class="fixed-bottom" ng-class="{'d-print-none': page === 'presskit'}">
     <hr>
     <div class="d-flex flex-wrap justify-content-center align-items-center h-100 py-2">
