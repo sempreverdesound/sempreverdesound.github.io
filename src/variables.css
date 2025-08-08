@@ -8,7 +8,6 @@
     --font-size: 18px;
     --body-color: black;
     --body-background: var(--light);
-    --body-padding: 20px;
 
     --nav-height: 50px;
     --nav-color: var(--light);
@@ -16,6 +15,9 @@
 
     --footer-height: 90px;
     --footer-logo-width: 100vw;
+
+    --main-margin-x: 20px;
+    --main-margin-y: 20px;
 
     --photo-width: 100%;
 
@@ -42,7 +44,8 @@
     }
 
     @media (min-width: 992px) {
-        --body-padding: 25px;
+        --main-margin-x: 25px;
+        --main-margin-y: 25px;
         --presskit-area: "photo side" "bottom bottom";
         --photos-grid: 2;
     }
@@ -54,11 +57,12 @@
 
     @media print {
         --font-size: 14px;
-        --body-padding: 30px;
         --nav-height: 40px;
+        --main-margin-x: 30px;
+        --main-margin-y: 10px;
         --photo-width: 380px;
         --presskit-area: "photo side" "bottom bottom";
         --presskit-logo-width: 300px;
-        --presskit-logo-margin: 0;
+        --presskit-logo-margin: 0px;
     }
 }

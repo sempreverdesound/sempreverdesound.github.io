@@ -46,11 +46,11 @@ a:hover {
 }
 
 #header-margin {
-    height: var(--nav-height);
+    height: calc(var(--nav-height) + var(--main-margin-y));
 }
 
 #footer-margin {
-    height: calc(var(--footer-height) + var(--body-padding));
+    height: calc(var(--footer-height) + var(--main-margin-y));
 }
 
 /* Navbar & Footer Settings */
@@ -102,7 +102,7 @@ nav {
 footer {
     height: var(--footer-height);
     background: var(--body-background);
-    padding: 0 var(--body-padding);
+    padding: 0 var(--main-margin-x);
 
     a {
         color: var(--dark);
@@ -116,9 +116,8 @@ footer {
 /** Sections Settings **/
 
 main {
-    padding: 10px var(--body-padding);
-    margin-bottom: var(--footer-height);
-    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+    margin: 0 var(--main-margin-x);
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height) - 2 * var(--main-margin-y));
 }
 
 .home {
@@ -127,7 +126,7 @@ main {
     }
 
     iframe {
-        margin-top: var(--body-padding);
+        margin-top: var(--main-margin-x);
     }
 
     #home-carousel {
@@ -163,7 +162,7 @@ main {
     }
 
     #songLyrics {
-        margin-bottom: calc(20px + var(--body-padding) + 2 * var(--song-player-padding));
+        margin-bottom: calc(20px + var(--main-margin-x) + 2 * var(--song-player-padding));
 
         strong {
             margin-top: 10px;
@@ -177,7 +176,7 @@ main {
 
     #songPlayer {
         position: fixed;
-        bottom: calc(var(--footer-height) + var(--body-padding));
+        bottom: calc(var(--footer-height) + var(--main-margin-x));
         left: var(--song-player-sides);
         right: var(--song-player-sides);
         padding: var(--song-player-padding);
