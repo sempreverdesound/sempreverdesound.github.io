@@ -6,6 +6,7 @@ angular.module("module", ["ngRoute", "ngSanitize"])
         $routeProvider
             .when("/home", {templateUrl: "src/templates/home.html"})
             .when("/contacts", {templateUrl: "src/templates/contacts.html"})
+            .when("/thanks", {templateUrl: "src/templates/thanks.html"})
             .when("/presskit", {templateUrl: "src/templates/presskit.html"})
             .when("/photos", {templateUrl: "src/templates/photos.html"})
             .when("/rider", {templateUrl: "src/templates/rider.html"})

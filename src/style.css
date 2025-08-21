@@ -267,6 +267,11 @@ main {
     margin-left: auto;
     max-width: 1000px;
 
+    div {
+        font-size: calc(1.1 * var(--font-size));
+        font-weight: 500;
+    }
+
     .field {
         border: 1px solid var(--dark);
         border-radius: 3px;
@@ -282,6 +287,16 @@ main {
             outline-color: var(--dark);
         }
     }
+}
+
+.thanks {
+    font-size: calc(2 * var(--font-size));
+
+    strong {
+        font-size: calc(4 * var(--font-size));
+        color: var(--dark);
+    }
+
 }
 
 /** Print Settings **/
