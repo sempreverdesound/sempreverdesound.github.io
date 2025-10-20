@@ -1,0 +1,15 @@
+<div class="d-block d-md-flex align-items-center">
+    <h1 class="me-2 mb-0">{{track.title}}</h1>
+    <h2 ng-if="track.subtitle !== undefined" class="my-0">({{track.subtitle}})</h2>
+</div>
+
+<div class="d-flex my-1 m-print-0 credits">
+    <!-- Use ng-bind-html instead of inserting the credits as text because they might contain html code-->
+    <i ng-bind-html="track.credits" class="d-block align-self-center mt-1 pb-2"></i>
+</div>
+
+<div id="songLyrics" ng-include="'src/templates/lyrics/' + track.alias + '.html'" class="d-flex flex-column"></div>
+
+<div id="songPlayer" class="d-flex d-print-none align-items-center">
+    <iframe width="100%" height="20px" src="{{track.url}}"></iframe>
+</div>

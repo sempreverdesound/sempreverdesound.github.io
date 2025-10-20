@@ -38,36 +38,46 @@
 <hr class="my-3">
 
 <div id="info" class="d-flex flex-column flex-xxl-row gap-3 px-xxl-4 justify-content-between">
-    <div class="d-flex flex-column">
-        <strong class="mb-2 mb-xxl-3">Social</strong>
-        <ul class="d-flex flex-column gap-1 gap-xxl-3">
-            <li ng-repeat="social in links.social">
-                <span class="{{social.icon}} pe-1"></span>
-                {{social.name}}:
-                <br class="d-none d-xxl-block">
-                <a href="{{social.href}}" target="_blank">{{social.sref}}</a>
-            </li>
-        </ul>
-    </div>
-    <div class="d-flex flex-column">
+    <div class="col-xxl-4 px-xxl-3 d-none d-print-flex flex-column">
         <strong class="mb-2 mb-xxl-3">Contatti</strong>
         <ul class="d-flex flex-column gap-1 gap-xxl-3">
-            <li ng-repeat="contact in links.contacts.slice().reverse()">
-                <span class="{{contact.icon}} pe-1"></span>
-                {{contact.name}}:
-                <br class="d-none d-xxl-block">
-                <a href="{{contact.href}}" target="_blank">{{contact.sref}}</a>
+            <li ng-repeat="link in links.slice().reverse()" ng-if="link.type === 'contact'">
+                <span class="{{link.icon}} pe-1"></span>
+                {{link.name}}:
+                <a href="{{link.href}}" target="_blank">{{link.sref}}</a>
             </li>
         </ul>
     </div>
-    <div class="d-flex flex-column">
-        <strong class="mb-2 mb-xxl-3">Canzoni</strong>
+    <div class="col-xxl-4 px-xxl-3 d-flex flex-column">
+        <strong class="mb-2 mb-xxl-3">Link</strong>
         <ul class="d-flex flex-column gap-1 gap-xxl-3">
-            <li ng-repeat="song in songs">
-                <span class="bi bi-music-note-list pe-1"></span>
-                {{song.title}}:
+            <li ng-repeat="link in links" ng-if="link.type !== 'contact'">
+                <span class="{{link.icon}} pe-1"></span>
+                {{link.name}}:
                 <br class="d-none d-xxl-block">
-                <a href="https://www.soundcloud.com/sempreverdesound/{{song.alias}}" target="_blank">soundcloud.com/sempreverdesound/{{song.alias}}</a>
+                <a href="{{link.href}}" target="_blank">{{link.sref}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xxl-4 px-xxl-3 d-flex flex-column">
+        <strong class="mb-2 mb-xxl-3">Brani</strong>
+        <ul class="d-flex flex-column gap-1 gap-xxl-3">
+            <li ng-repeat="track in tracks" ng-if="!track.rework">
+                <span class="bi bi-music-note-list pe-1"></span>
+                {{track.title}}:
+                <br class="d-none d-xxl-block">
+                <a href="https://www.soundcloud.com/sempreverdesound/{{track.alias}}" target="_blank">soundcloud.com/sempreverdesound/{{track.alias}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xxl-4 px-xxl-3 d-flex flex-column">
+        <strong class="mb-2 mb-xxl-3">Cover / Remix</strong>
+        <ul class="d-flex flex-column gap-1 gap-xxl-3">
+            <li ng-repeat="track in tracks" ng-if="track.rework">
+                <span class="bi bi-music-note-list pe-1"></span>
+                {{track.title}}:
+                <br class="d-none d-xxl-block">
+                <a href="https://www.soundcloud.com/sempreverdesound/{{track.alias}}" target="_blank">soundcloud.com/sempreverdesound/{{track.alias}}</a>
             </li>
         </ul>
     </div>

@@ -23,7 +23,7 @@
     <script src="src/controller.js"></script>
 </head>
 
-<body ng-app="module" ng-controller="controller">
+<body ng-app="module" ng-controller="controller" ng-class="{'no-footer': page === 'presskit'}">
 <nav class="navbar navbar-expand fixed-top align-items-start d-print-none pt-2 pb-0 px-2">
     <ul class="navbar-nav d-flex justify-content-evenly justify-content-md-start h-100">
         <!-- Home Button -->
@@ -44,9 +44,27 @@
                 <span class="d-none d-md-inline"> Brani</span>
             </button>
             <ul class="dropdown-menu m-0" aria-labelledby="songs">
-                <li ng-repeat="song in songs" class="my-2">
-                    <a class="nav-link dropdown-item" href="#{{song.alias}}">
-                        {{song.subtitle === undefined ? song.title : (song.title + ' (' + song.subtitle + ')')}}
+                <li ng-repeat="track in tracks" ng-if="!track.rework" class="my-2">
+                    <a class="nav-link dropdown-item" href="#{{track.alias}}">
+                        {{track.subtitle === undefined ? track.title : (track.title + ' (' + track.subtitle + ')')}}
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- Reworks Dropdown -->
+        <li class="nav-item dropdown" ng-class="{'current-page': page === 'rework'}">
+            <button id="reworks"
+                    type="button"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                <span class="d-inline bi bi-disc pe-1"></span>
+                <span class="d-none d-md-inline"> Cover / Remix</span>
+            </button>
+            <ul class="dropdown-menu m-0" aria-labelledby="songs">
+                <li ng-repeat="track in tracks" ng-if="track.rework" class="my-2">
+                    <a class="nav-link dropdown-item" href="#{{track.alias}}">
+                        [<span style="font-weight: 600">{{track.rework}}</span>] {{track.title}}
                     </a>
                 </li>
             </ul>
@@ -94,13 +112,13 @@
             <img src="res/logo.png" alt="SempreVerde" height="30">
         </div>
         <ul class="d-flex order-md-0 p-0">
-            <li class="px-2" ng-repeat="social in links.social">
-                <a href={{social.href}} target="_blank"><span class={{social.icon}}></span></a>
+            <li class="px-2" ng-repeat="link in links" ng-if="link.split === 'left'">
+                <a href={{link.href}} target="_blank"><span class={{link.icon}}></span></a>
             </li>
         </ul>
         <ul class="d-flex order-md-2 p-0">
-            <li class="px-2" ng-repeat="contact in links.contacts">
-                <a href={{contact.href}} target="_blank"><span class={{contact.icon}}></span></a>
+            <li class="px-2" ng-repeat="link in links" ng-if="link.split === 'right'">
+                <a href={{link.href}} target="_blank"><span class={{link.icon}}></span></a>
             </li>
         </ul>
     </div>

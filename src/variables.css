@@ -5,7 +5,7 @@
     --medium: #579D6C;
     --light: #E4E1D6;
 
-    --font-size: 18px;
+    --font-size: 16px;
     --body-color: black;
     --body-background: var(--light);
 
@@ -34,6 +34,7 @@
     --photos-grid: 1;
 
     @media (min-width: 768px) {
+        --font-size: 18px;
         --footer-height: 60px;
         --footer-logo-width: fit-content;
         --photo-width: max-content;
@@ -57,12 +58,16 @@
 
     @media print {
         --font-size: 14px;
-        --nav-height: 40px;
-        --main-margin-x: 30px;
-        --main-margin-y: 10px;
+        --nav-height: 0px;
+        --main-margin-x: 25px;
+        --main-margin-y: 25px;
         --photo-width: 380px;
         --presskit-area: "photo side" "bottom bottom";
         --presskit-logo-width: 300px;
         --presskit-logo-margin: 0px;
+
+        body.no-footer {
+            --footer-height: 0px;
+        }
     }
 }

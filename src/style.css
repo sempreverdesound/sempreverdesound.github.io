@@ -139,7 +139,7 @@ main {
     }
 }
 
-.song {
+.song, .rework {
     h1, h2, strong {
         text-transform: uppercase;
         font-weight: 600;
@@ -210,9 +210,12 @@ main {
 }
 
 .rider {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1400px;
+    @media screen {
+        /* center the block (not when printing) */
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1400px;
+    }
 
     a {
         color: inherit;
@@ -313,12 +316,17 @@ main {
 
     .presskit {
         strong {
+            font-size: calc(1.2 * var(--font-size)) !important;
             text-transform: uppercase !important;
-            font-size: calc(1.2 * var(--font-size));
+            margin-bottom: 4px !important;
+        }
+
+        #info {
+            gap: 8px !important;
         }
 
         .logo {
-            width: 300px;
+            width: 300px !important;
         }
     }
 }

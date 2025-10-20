@@ -11,30 +11,30 @@ angular.module("module", ["ngRoute", "ngSanitize"])
             .when("/photos", {templateUrl: "src/templates/photos.html"})
             .when("/rider", {templateUrl: "src/templates/rider.html"})
             .otherwise({redirectTo: "/home"})
-        songs.forEach(song => {
-            $routeProvider.when("/" + song.alias, {templateUrl: "src/templates/song.html"})
+        tracks.forEach(track => {
+            $routeProvider.when("/" + track.alias, {templateUrl: "src/templates/track.html"})
         })
     })
 
     .controller("controller", function ($scope, $route, $sanitize, $sce) {
+        $scope.tracks = tracks
         $scope.photos = photos
         $scope.links = links
-        $scope.songs = songs
         $scope.page = undefined
-        $scope.song = undefined
+        $scope.track = undefined
 
         // change page value and song index every time there is a new routing
         // if a song page is selected, use generic tag "song" for any of the songs
         $scope.$on('$routeChangeSuccess', function (event, route) {
             $scope.page = route.$$route.originalPath.substring(1)
-            $scope.song = songs.find(song => song.alias === $scope.page)
-            if ($scope.song !== undefined) {
-                $scope.page = "song"
+            $scope.track = tracks.find(track => track.alias === $scope.page)
+            if ($scope.track !== undefined) {
+                $scope.page = ($scope.track.rework === undefined) ? "song" : "rework"
             }
         })
 
         // modify urls to include the full path to soundcloud while also setting them as trusted sources
-        $scope.songs.forEach(song => {
-            song.url = $sce.trustAsResourceUrl("https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.url + "&color=%23579D6C&show_user=false")
+        $scope.tracks.forEach(track => {
+            track.url = $sce.trustAsResourceUrl("https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + track.url + "&color=%23579D6C&show_user=false")
         })
     })
