@@ -137,5 +137,6 @@ const photos = [
     {name: "image2", alt: "SempreVerde - Foto 2"},
     {name: "image3", alt: "SempreVerde - Foto 3"},
     {name: "image4", alt: "SempreVerde - Foto 4"},
-    {name: "image5", alt: "SempreVerde - Foto 5"}
+    {name: "image5", alt: "SempreVerde - Foto 5"},
+    {name: "image6", alt: "SempreVerde - Foto 6"}
 ]
