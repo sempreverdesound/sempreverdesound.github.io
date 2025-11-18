@@ -204,7 +204,8 @@ main {
     }
 
     .logo {
-        width: var(--presskit-logo-width);
+        min-width: var(--presskit-logo-width);
+        max-width: var(--presskit-logo-width);
         margin: var(--presskit-logo-margin);
     }
 }

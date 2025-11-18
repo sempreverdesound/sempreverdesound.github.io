@@ -13,7 +13,7 @@
     --nav-color: var(--light);
     --nav-background: var(--dark);
 
-    --footer-height: 90px;
+    --footer-height: 110px;
     --footer-logo-width: 100vw;
 
     --main-margin-x: 20px;
@@ -29,13 +29,13 @@
 
     --presskit-area: "photo" "side" "bottom";
     --presskit-logo-width: 200px;
-    --presskit-logo-margin: -8px 2px 0 0;
+    --presskit-logo-margin: 0 auto -9px -6px;
 
     --photos-grid: 1;
 
     @media (min-width: 768px) {
         --font-size: 18px;
-        --footer-height: 60px;
+        --footer-height: 90px;
         --footer-logo-width: fit-content;
         --photo-width: max-content;
         --song-subtitle-multiplier: 1.9;
@@ -61,10 +61,10 @@
         --nav-height: 0px;
         --main-margin-x: 25px;
         --main-margin-y: 25px;
-        --photo-width: 380px;
+        --photo-width: 350px;
         --presskit-area: "photo side" "bottom bottom";
-        --presskit-logo-width: 300px;
-        --presskit-logo-margin: 0px;
+        --presskit-logo-width: 250px;
+        --presskit-logo-margin: -15px auto 0 auto;
 
         body.no-footer {
             --footer-height: 0px;
