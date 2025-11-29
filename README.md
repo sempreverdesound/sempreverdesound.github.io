@@ -1,6 +1,6 @@
 ## sempreverdesound.github.io
 
-**SempreVerde** is the solo project of Luca Giuliani, Bologna-based singer-songwriter and music producer, former member
+**Sempreverde** is the solo project of Luca Giuliani, Bologna-based singer-songwriter and music producer, former member
 of the electropop duo
 [Divinae Miranda](https://open.spotify.com/intl-it/artist/2wvpQCjOmseuzCLC9orKpn?si=SX406iOfSi-U_9eEje4gaw).
 

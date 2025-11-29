@@ -40,19 +40,11 @@ const tracks = [
             "<div>Musica di Luca Giuliani</div>"
     },
     {
-        url: "2194653627",
-        alias: "rossa-palestina",
-        title: "Rossa Palestina",
-        credits: "Testo e Musica di Umberto Fiori.",
-        subtitle: "SempreVerde Remix",
-        rework: "Remix"
-    },
-    {
         url: "2194653291",
         alias: "tutti-i-miei-sbagli",
         title: "Tutti I Miei Sbagli",
         credits: "Testo e Musica di Samuel Romano, Massimiliano Casacci, e Davide Dileo.",
-        subtitle: "SempreVerde Cover",
+        subtitle: "Sempreverde Cover",
         rework: "Cover"
     },
     {
@@ -60,8 +52,16 @@ const tracks = [
         alias: "aurora-sogna",
         title: "Aurora Sogna",
         credits: "Testo e Musica di Samuel Romano, Massimiliano Casacci, e Davide Dileo.",
-        subtitle: "SempreVerde Cover",
+        subtitle: "Sempreverde Cover",
         rework: "Cover"
+    },
+    {
+        url: "2194653627",
+        alias: "rossa-palestina",
+        title: "Rossa Palestina",
+        credits: "Testo e Musica di Umberto Fiori.",
+        subtitle: "Sempreverde Remix",
+        rework: "Remix"
     }
 ]
 
@@ -133,10 +133,10 @@ const links = [
 ]
 
 const photos = [
-    {name: "image1", alt: "SempreVerde - Foto 1"},
-    {name: "image2", alt: "SempreVerde - Foto 2"},
-    {name: "image3", alt: "SempreVerde - Foto 3"},
-    {name: "image4", alt: "SempreVerde - Foto 4"},
-    {name: "image5", alt: "SempreVerde - Foto 5"},
-    {name: "image6", alt: "SempreVerde - Foto 6"}
+    {name: "image1", alt: "Sempreverde - Foto 1"},
+    {name: "image2", alt: "Sempreverde - Foto 2"},
+    {name: "image3", alt: "Sempreverde - Foto 3"},
+    {name: "image4", alt: "Sempreverde - Foto 4"},
+    {name: "image5", alt: "Sempreverde - Foto 5"},
+    {name: "image6", alt: "Sempreverde - Foto 6"}
 ]

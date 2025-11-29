@@ -357,6 +357,10 @@ main {
         display: none !important;
     }
 
+    .d-print-inline {
+        display: inline !important;
+    }
+
     .d-print-block {
         display: block !important;
     }
