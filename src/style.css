@@ -1,6 +1,7 @@
 /* Main Settings */
 
-html, body {
+html,
+body {
     font-family: "Exo 2", sans-serif;
     font-size: var(--font-size);
     color: var(--body-color);
@@ -30,11 +31,11 @@ p {
 }
 
 a {
-    color: var(--medium)
+    color: var(--medium);
 }
 
 a:hover {
-    color: var(--dark)
+    color: var(--dark);
 }
 
 .photo {
@@ -83,7 +84,8 @@ nav {
         padding: 0 20px !important;
         color: var(--nav-color);
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
             color: var(--medium);
             background: inherit;
         }
@@ -139,8 +141,11 @@ main {
     }
 }
 
-.song, .rework {
-    h1, h2, strong {
+.song,
+.rework {
+    h1,
+    h2,
+    strong {
         text-transform: uppercase;
         font-weight: 600;
     }
@@ -236,7 +241,9 @@ main {
         }
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
         font-size: calc(0.8 * var(--font-size));
         padding: 5px 10px;
         border: 1px solid black;
@@ -300,7 +307,6 @@ main {
         font-size: calc(4 * var(--font-size));
         color: var(--dark);
     }
-
 }
 
 /** Print Settings **/

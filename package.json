@@ -1,0 +1,19 @@
+{
+  "name": "giuluck.github.io",
+  "version": "0.1.0",
+  "description": "My Resume",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.8.2",
+    "angular-route": "1.3.14",
+    "angular-sanitize": "1.8.3",
+    "bootstrap": "5.1.3",
+    "jquery": "3.5.1"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
+  },
+  "scripts": {
+    "start": "http-server ./ -o -a localhost -p 8080 -c-1"
+  }
+}

@@ -2,45 +2,24 @@
     <div id="home-carousel" data-bs-ride="carousel" class="text-center align-self-top carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item {{::($first ? 'active' : '')}}" ng-repeat="photo in photos">
-                <img src="res/{{photo.name}}.jpg" class="d-block photo" alt={{photo.alt}}>
+                <img src="res/{{photo.name}}.jpg" class="d-block photo" alt="{{photo.alt}}" />
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#home-carousel"
-                data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#home-carousel" data-bs-slide="prev">
             <span class="fa fa-3x fa-angle-left" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#home-carousel"
-                data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#home-carousel" data-bs-slide="next">
             <span class="fa fa-3x fa-angle-right" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
     <div class="d-flex flex-column gap-2 gap-lg-3 gap-xl-4 py-2 justified align-self-center">
-        <p>
-            <strong>Sempreverde</strong> è il progetto solista di Luca Giuliani,
-            cantautore e produttore musicale con base a Bologna, già membro del duo elettropop
-            <a href="https://open.spotify.com/intl-it/artist/2wvpQCjOmseuzCLC9orKpn?si=SX406iOfSi-U_9eEje4gaw"
-               target="_blank">Divinae Miranda</a>.
-        </p>
-        <p>
-            Il progetto nasce dall'esigenza di sperimentare sonorità nuove, mescolando elementi <i>trance</i> e
-            <i>melodic techno</i> a testi ispirati dalla tradizione cantautorale italiana di stampo più
-            elettronico e
-            alternativo, da <i>Franco Battiato</i> ai <i>Subsonica</i> e i <i>Blue Vertigo</i>. E se da un
-            lato
-            l'aspetto cupo della techno serve da spinta per cantare la rabbia e la disillusione, trattando
-            apertamente
-            temi sociali e politici all'interno dei brani a partire proprio dalla questione ecologica richiamata dal
-            nome, dall'altro l'immaginario del <i>clubbing</i> è usato come collante per tenere insieme un aspetto
-            più collettivo e gioioso, che prende forma nei rituali tribali della danza.
-        </p>
+        <p><strong>Sempreverde</strong> è il progetto solista di Luca Giuliani, cantautore e produttore musicale con base a Bologna.</p>
+        <p>Il progetto nasce dall'esigenza di sperimentare sonorità nuove, mescolando elementi <i>trance</i> e <i>melodic techno</i> a testi ispirati dalla tradizione cantautorale italiana di stampo più elettronico e alternativo, da <i>Franco Battiato</i> ai <i>Subsonica</i> e i <i>Blue Vertigo</i>. E se da un lato l'aspetto cupo della techno serve da spinta per cantare la rabbia e la disillusione, trattando apertamente temi sociali e politici all'interno dei brani a partire proprio dalla questione ecologica richiamata dal nome, dall'altro l'immaginario del <i>clubbing</i> è usato come collante per tenere insieme un aspetto più collettivo e gioioso, che prende forma nei rituali tribali della danza.</p>
     </div>
 </div>
 
 <div class="d-block my-auto">
-    <iframe width="100%"
-            height="360px"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2034293238&color=%23579D6C&show_teaser=false&show_playcount=false">
-    </iframe>
+    <iframe width="100%" height="360px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2034293238&color=%23579D6C&show_teaser=false&show_playcount=false"> </iframe>
 </div>

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --dark: #293F14;
-    --medium: #579D6C;
-    --light: #E4E1D6;
+    --dark: #293f14;
+    --medium: #579d6c;
+    --light: #e4e1d6;
 
     --font-size: 16px;
     --body-color: black;

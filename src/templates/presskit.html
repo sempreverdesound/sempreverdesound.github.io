@@ -1,39 +1,18 @@
 <div id="biography" class="d-grid gap-3">
-    <img src="res/image1.jpg"
-         class="photo mx-auto"
-         alt="Sempreverde - Immagine Profilo"
-         style="grid-area: photo"
-    >
+    <img src="res/image1.jpg" class="photo mx-auto" alt="Sempreverde - Immagine Profilo" style="grid-area: photo" />
     <div class="d-flex flex-column gap-3 justify-content-evenly justify-content-xxl-end" style="grid-area: side">
         <p class="justified">
-            <img src="res/logo.png" class="logo d-print-block align-bottom" alt="Sempreverde">
+            <img src="res/logo.png" class="logo d-print-block align-bottom" alt="Sempreverde" />
             è il progetto solista di Luca Giuliani, cantautore e produttore musicale con base a Bologna.
         </p>
-        <p class="justified">
-            Il progetto nasce dall'esigenza di sperimentare sonorità nuove, mescolando elementi <i>trance</i> e
-            <i>melodic techno</i> a testi ispirati dalla tradizione cantautorale italiana di stampo più elettronico e
-            alternativo, da <i>Franco Battiato</i> ai <i>Subsonica</i> e i <i>Blue Vertigo</i>. E se da un lato
-            l'aspetto cupo della techno serve da spinta per cantare la rabbia e la disillusione, trattando apertamente
-            temi sociali e politici all'interno dei brani a partire proprio dalla questione ecologica richiamata dal
-            nome, dall'altro l'immaginario del <i>clubbing</i> è usato come collante per tenere insieme un aspetto più
-            collettivo e gioioso, che prende forma nei rituali tribali della danza.
-        </p>
+        <p class="justified">Il progetto nasce dall'esigenza di sperimentare sonorità nuove, mescolando elementi <i>trance</i> e <i>melodic techno</i> a testi ispirati dalla tradizione cantautorale italiana di stampo più elettronico e alternativo, da <i>Franco Battiato</i> ai <i>Subsonica</i> e i <i>Blue Vertigo</i>. E se da un lato l'aspetto cupo della techno serve da spinta per cantare la rabbia e la disillusione, trattando apertamente temi sociali e politici all'interno dei brani a partire proprio dalla questione ecologica richiamata dal nome, dall'altro l'immaginario del <i>clubbing</i> è usato come collante per tenere insieme un aspetto più collettivo e gioioso, che prende forma nei rituali tribali della danza.</p>
     </div>
     <div class="d-flex flex-column gap-3 justify-content-evenly justify-content-xxl-start" style="grid-area: bottom">
-        <p class="justified align-self-center">
-            Già attivo da diversi anni in altre formazioni, Giuliani si è esibito in locali come <i>Sottoscala 9
-            (LT)</i>, <i>Giardini Luzzati (GE)</i>, <i>Diagonal Loft Club (FC)</i>, <i>La Tenda</i> e <i>OFF (MO)</i>,
-            <i>DumBO</i> e <i>Porta Pratello (BO)</i>, <i>Vox Live Club (AN)</i>,<i>La Bookique (TN)</i>, e altri
-            eventi fra cui il <i>Meeting delle Etichette Indipendenti (MEI)</i> di Faenza, le celebrazioni per il
-            <i>25 Aprile</i> a Bologna, e il festival <i>Suoni di Marca</i> a Treviso. Al momento è in pausa
-            dall'attività live per dedicarsi ai nuovi brani del progetto Sempreverde insieme al produttore bolognese
-            <a href="https://www.rockit.it/marco-bertoni/biografia" target="_blank">Marco Bertoni</a> (membro dei
-            Confusional Quartet e produttore, fra gli altri, di Bloody Beetroots, Motel Connections, e Ibisco).
-        </p>
+        <p class="justified align-self-center">Già attivo da diversi anni in altre formazioni, Giuliani si è esibito in locali come <i>Sottoscala 9 (LT)</i>, <i>Giardini Luzzati (GE)</i>, <i>Diagonal Loft Club (FC)</i>, <i>La Tenda</i> e <i>OFF (MO)</i>, <i>DumBO</i> e <i>Porta Pratello (BO)</i>, <i>Vox Live Club (AN)</i>,<i>La Bookique (TN)</i>, e altri eventi fra cui il <i>Meeting delle Etichette Indipendenti (MEI)</i> di Faenza, le celebrazioni per il <i>25 Aprile</i> a Bologna, e il festival <i>Suoni di Marca</i> a Treviso. Al momento è in pausa dall'attività live per dedicarsi ai nuovi brani del progetto Sempreverde insieme al produttore bolognese <a href="https://www.rockit.it/marco-bertoni/biografia" target="_blank">Marco Bertoni</a> (membro dei Confusional Quartet e produttore, fra gli altri, di Bloody Beetroots, Motel Connections, e Ibisco).</p>
     </div>
 </div>
 
-<hr class="my-3">
+<hr class="my-3" />
 
 <div id="info" class="d-flex flex-column flex-xxl-row gap-3 px-xxl-4 justify-content-between">
     <div class="col-xxl-4 px-xxl-3 d-none d-print-flex flex-column">
@@ -52,7 +31,7 @@
             <li ng-repeat="link in links" ng-if="link.type !== 'contact'">
                 <span class="{{link.icon}} pe-1"></span>
                 {{link.name}}:
-                <br class="d-none d-xxl-block">
+                <br class="d-none d-xxl-block" />
                 <a href="{{link.href}}" target="_blank">{{link.sref}}</a>
             </li>
         </ul>
@@ -63,7 +42,7 @@
             <li ng-repeat="track in tracks" ng-if="!track.rework">
                 <span class="bi bi-music-note-list pe-1"></span>
                 {{track.title}}:
-                <br class="d-none d-xxl-block">
+                <br class="d-none d-xxl-block" />
                 <a href="https://www.soundcloud.com/sempreverdesound/{{track.alias}}" target="_blank">soundcloud.com/sempreverdesound/{{track.alias}}</a>
             </li>
         </ul>
@@ -74,7 +53,7 @@
             <li ng-repeat="track in tracks" ng-if="track.rework">
                 <span class="bi bi-music-note-list pe-1"></span>
                 {{track.title}}:
-                <br class="d-none d-xxl-block">
+                <br class="d-none d-xxl-block" />
                 <a href="https://www.soundcloud.com/sempreverdesound/{{track.alias}}" target="_blank">soundcloud.com/sempreverdesound/{{track.alias}}</a>
             </li>
         </ul>
