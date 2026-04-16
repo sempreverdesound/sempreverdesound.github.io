@@ -383,4 +383,8 @@ main {
     .flex-print-column {
         flex-direction: column !important;
     }
+
+    .align-print-end {
+        align-self: end !important;
+    }
 }
