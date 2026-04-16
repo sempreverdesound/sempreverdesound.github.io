@@ -123,7 +123,8 @@ main {
 }
 
 .home {
-    strong {
+    strong,
+    i {
         color: var(--dark);
     }
 
